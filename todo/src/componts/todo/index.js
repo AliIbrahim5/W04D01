@@ -11,10 +11,12 @@ this.state={
     {id:2,name:"sleep"},
 ]
 }
+
 }
 
+
   
-  handleSubmit(e) {
+  handleSubmit =(e) =>{
     e.preventDefault()
     const obj= {
         id:this.state.todos.length +1,
@@ -25,13 +27,13 @@ this.state={
    todos: [...this.state.todos,obj]
        
     });
-    Event.target.taxt.value ="";
+    e.target.taxt.value ="";
   };
 
   handDelet =(id)=>{
     this.setState({ todos:this.state.todos.filter((obj)=>obj.id != id)
     });
-  }
+  };
   
     render() {
         return (
@@ -42,16 +44,21 @@ this.state={
                 </form>
                 <ul> 
                    {this.state.todos.map((todo,i)=>(
-                     <Todoitem todo={todo} key={i} handDelet={this.handDelet}/> 
+                     <li>
+                     <h3>{todo.name}</h3>
+                     <h3 onClick={()=>{this.handDelet(todo.id)}}className="handDelet" >X</h3>
+                 </li>
                    ))}  
-                </ul>
-               
-               
+                </ul>   
             </div>
-        )
-                   }           
+        );
+                   }
+                  }
+                  
+                            
         
-    }
+  
+
 
 
 

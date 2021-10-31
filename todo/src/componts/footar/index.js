@@ -12,6 +12,6 @@ export default class Footar extends Component {
     }
 }
 
- 
+
 
 

@@ -10,8 +10,8 @@ export default class Todoitem extends Component {
         return (
             <div>
                 <li>
-                    <h3>{this.props.obj.name}</h3>
-                    <h3 onClick={()=> this.props.handlDel(this.props.todo.id)}>X</h3>
+                    <h3>{this.props.todo.name}</h3>
+                    <h3 onClick={()=> this.props.handDelet(this.props.todo.id)} className="handDelet">X</h3>
                 </li>
             </div>
         )

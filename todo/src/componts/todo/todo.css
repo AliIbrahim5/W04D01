@@ -12,3 +12,13 @@
  justify-content: center;
 
 }
+
+.handDelet:hover{
+
+background-color: cadetblue;
+width: 100%;
+cursor: pointer;
+
+
+    
+}
